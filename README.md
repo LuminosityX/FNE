@@ -21,7 +21,7 @@ The raw images can be downloaded from their original sources [here](http://shann
 
 We refer to the path of extracted files as `$DATA_PATH`. 
 
-If you don't want to train from scratch, you can download the pretrained FNE model from here (for Flickr30K model).
+If you don't want to train from scratch, you can download the pretrained FNE model from [here](https://drive.google.com/file/d/1Fvh5jjdXIxjtYFe-t5dAxcc53peRTIgB/view?usp=drive_link)  (for Flickr30K model).
 
 ## Train new models
 Run `train.py`:
