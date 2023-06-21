@@ -17,7 +17,7 @@ We recommended the following dependencies.
 
 ## Download data and pretrained model
 
-The raw images can be downloaded from their original sources [here](http://shannon.cs.illinois.edu/DenotationGraph/) and [here](http://mscoco.org/). We will use the json files to levage these data.
+The raw images can be downloaded from their original sources [here](http://shannon.cs.illinois.edu/DenotationGraph/) and [here](http://mscoco.org/). We will use the [json](https://drive.google.com/drive/folders/1mondFS6TCbzvz2ZUk4UDFAxnD8xk25ie?usp=drive_link) files to leverage these data.
 
 We refer to the path of extracted files as `$DATA_PATH`. 
 
