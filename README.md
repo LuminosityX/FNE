@@ -21,7 +21,7 @@ The raw images can be downloaded from their original sources [here](http://shann
 
 We refer to the path of extracted files as `$DATA_PATH`. 
 
-If you don't want to train from scratch, you can download the pretrained FNE model from [here](https://drive.google.com/file/d/1Fvh5jjdXIxjtYFe-t5dAxcc53peRTIgB/view?usp=drive_link)  (for Flickr30K model) and [here]() (for MSCOCO model).
+If you don't want to train from scratch, you can download the pretrained FNE model from [here](https://drive.google.com/file/d/1dh1rS3ttv-fGudx9jsLTJQtM3D7WLztz/view?usp=drive_link)  (for Flickr30K model) and [here](https://drive.google.com/file/d/1_m2b4ufECm3vMGu6vI38fJQ1q4aYZYfo/view?usp=drive_link) (for MSCOCO model).
 
 ## Train new models
 Run `train.py`:
