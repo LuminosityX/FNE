@@ -33,7 +33,7 @@ def set_seed(seed = 3407):
 def main():
     # Hyper Parameters
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image_root', default='/data/hdd1/lihaoxuan/originaldata/f30k/images/',
+    parser.add_argument('--image_root', default='your file path',
                         help='path to orignal image')
     parser.add_argument('--dataset', default='flickr',
                         help='Dataset: flickr/mscoco')
