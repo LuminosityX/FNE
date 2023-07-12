@@ -21,7 +21,7 @@ The raw images can be downloaded from their original sources [here](http://shann
 
 We refer to the path of extracted files as `$DATA_PATH`. 
 
-If you don't want to train from scratch, you can download the pretrained FNE model from [here](https://drive.google.com/file/d/1Fvh5jjdXIxjtYFe-t5dAxcc53peRTIgB/view?usp=drive_link)  (for Flickr30K model).
+If you don't want to train from scratch, you can download the pretrained FNE model from [here](https://drive.google.com/file/d/1Fvh5jjdXIxjtYFe-t5dAxcc53peRTIgB/view?usp=drive_link)  (for Flickr30K model) and [here]() (for MSCOCO model).
 
 ## Train new models
 Run `train.py`:
@@ -29,13 +29,13 @@ Run `train.py`:
 For FNE on Flickr30K:
 
 ```bash
-python train.py --data_path $DATA_PATH/images  --logger_name runs/flickr_FNE --dataset flickr --max_violation
+python train.py --data_path $DATA_PATH/f30k/images  --logger_name runs/flickr_FNE --dataset flickr --max_violation
 ```
 
 For FNE on MSCOCO:
 
 ```bash
-python train.py --data_path $DATA_PATH/images  --logger_name runs/mscoco_FNE --dataset mscoco --max_violation
+python train.py --data_path $DATA_PATH/coco/images  --logger_name runs/mscoco_FNE --dataset mscoco --max_violation
 ```
 
 
@@ -44,7 +44,13 @@ python train.py --data_path $DATA_PATH/images  --logger_name runs/mscoco_FNE --d
 Test on Flickr30K:
 
 ```bash
-python test.py
+python train.py --data_path $DATA_PATH/f30k/images  --logger_name runs/flickr_FNE --dataset flickr --max_violation --test
+```
+
+Test on MSCOCO:
+
+```bash
+python train.py --data_path $DATA_PATH/coco/images  --logger_name runs/mscoco_FNE --dataset mscoco --max_violation --test
 ```
 
 
