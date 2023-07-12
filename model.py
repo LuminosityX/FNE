@@ -198,7 +198,7 @@ class FNE(object):
         return state_dict
 
     def load_state_dict(self, state_dict):
-        self.model.load_state_dict(state_dict[0])
+        self.model.load_state_dict(state_dict[0], strict=False)
 
     def train_start(self):
         """switch to train mode
