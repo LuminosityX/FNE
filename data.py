@@ -47,6 +47,10 @@ class re_train_dataset(Dataset):
             if img_id not in self.img_ids.keys():
                 self.img_ids[img_id] = n
                 n += 1    
+
+        self.f30k = True
+        if '/coco/' in image_root:
+            self.f30k = False
         
     def __len__(self):
         return len(self.ann)
@@ -55,7 +59,10 @@ class re_train_dataset(Dataset):
         
         ann = self.ann[index]
 
-        ann_split = ann['image'].split('/')[-1]
+        if self.f30k:
+            ann_split = ann['image'].split('/')[-1]
+        else:
+            ann_split = ann['image']
         image_path = os.path.join(self.image_root,ann_split)     
         
         #image_path = os.path.join(self.image_root,ann['image'])        
@@ -89,13 +96,20 @@ class re_eval_dataset(Dataset):
                 self.img2txt[img_id].append(txt_id)
                 self.txt2img[txt_id] = img_id
                 txt_id += 1
+
+        self.f30k = True
+        if '/coco/' in image_root:
+            self.f30k = False
                                     
     def __len__(self):
         return len(self.image)
     
     def __getitem__(self, index):    
 
-        ann_split = self.ann[index]['image'].split('/')[-1]
+        if self.f30k:
+            ann_split = self.ann[index]['image'].split('/')[-1]
+        else:
+            ann_split = self.ann[index]['image']
         image_path = os.path.join(self.image_root,ann_split)     
         
         #image_path = os.path.join(self.image_root, self.ann[index]['image'])        
