@@ -56,3 +56,11 @@ python train.py --data_path $DATA_PATH/coco/images  --logger_name runs/mscoco_FN
 
 ## Reference
 
+```
+@inproceedings{li2023your,
+  title={Your Negative May not Be True Negative: Boosting Image-Text Matching with False Negative Elimination},
+  author={Li, Haoxuan and Bin, Yi and Liao, Junrong and Yang, Yang and Shen, Heng Tao},
+  booktitle={ACM Multimedia},
+  year={2023}
+}
+```
